@@ -26,7 +26,7 @@ def get_pkg_config(cfg):
     proj_root = os.path.abspath(os.path.join(curr_path, "../../../"))
     pkg_config_py = os.path.join(proj_root, "vta/python/vta/pkg_config.py")
     libpkg = {"__file__": pkg_config_py}
-    exec(compile(open(pkg_config_py, "rb").read(), pkg_config_py, "exec"), libpkg, libpkg)
+                en(pkg_config_py, "rb").read(), pkg_config_py, "exec"), libpkg, libpkg)
     PkgConfig = libpkg["PkgConfig"]
     return PkgConfig(cfg, proj_root)
 
